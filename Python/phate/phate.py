@@ -285,7 +285,7 @@ class PHATE(BaseEstimator):
             )
 
     @property
-    def diff_potential(self):
+    def diff_potential(self, t_max):
         """Interpolates the PHATE potential to one entry per cell
 
         This is equivalent to calculating infinite-dimensional PHATE,
@@ -295,7 +295,7 @@ class PHATE(BaseEstimator):
         -------
         diff_potential : ndarray, shape=[n_samples, min(n_landmark, n_samples)]
         """
-        diff_potential = self._calculate_potential()
+        diff_potential = self._calculate_potential(t_max=t_max)
         if isinstance(self.graph, graphtools.graphs.LandmarkGraph):
             diff_potential = self.graph.interpolate(diff_potential)
         return diff_potential
