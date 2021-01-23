@@ -941,6 +941,11 @@ class PHATE(BaseEstimator):
             embedding = self.transform(**kwargs)
         return embedding
 
+
+    def calculate_potential(self, t=None, t_max=100, plot_optimal_t=False, ax=None):
+        return _calculate_potential(self, t=None, t_max=100, plot_optimal_t=False, ax=None)
+
+
     def _calculate_potential(self, t=None, t_max=100, plot_optimal_t=False, ax=None):
         """Calculates the diffusion potential
 
