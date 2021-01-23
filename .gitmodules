@@ -1,3 +1,3 @@
-[submodule "phateR"]
+[submodule "updated_phateR"]
 	path = phateR
 	url = https://github.com/ElementGenomicsInc/phateR.git
