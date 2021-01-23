@@ -943,7 +943,7 @@ class PHATE(BaseEstimator):
 
 
     def calculate_potential(self, t=None, t_max=100, plot_optimal_t=False, ax=None):
-        return self._calculate_potential(self, t, t_max, plot_optimal_t, ax)
+        return self._calculate_potential(t, t_max, plot_optimal_t, ax)
 
 
     def _calculate_potential(self, t=None, t_max=100, plot_optimal_t=False, ax=None):
