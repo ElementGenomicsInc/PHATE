@@ -285,7 +285,7 @@ class PHATE(BaseEstimator):
             )
 
     @property
-    def diff_potential(self, t_max):
+    def diff_potential(self, t_max=100):
         """Interpolates the PHATE potential to one entry per cell
 
         This is equivalent to calculating infinite-dimensional PHATE,
